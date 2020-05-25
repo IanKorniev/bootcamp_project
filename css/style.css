@@ -25,6 +25,13 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/Coustard-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -333,6 +340,136 @@ div.ant-carousel-arrow-left {
 .ant-carousel-arrow-right:hover {
 
 }*/
+
+/*секция 4*/
+.s4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.s4_desc {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-family: "OpenSans Bold";
+  font-weight: bold;
+  padding-top: 122px;
+  position: relative;
+  line-height: 27px;
+}
+
+.s4_desc::before {
+  content: "❞";
+  position: absolute;
+  top: 42%;
+  left: 43%;
+  font-size: 100px;
+  color: rgb(255, 255, 0);
+  font-family: "Coustard Regular";
+}
+
+.s4_list {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+  padding-left: 55px;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: #6c6e79;
+  padding-top: 44px;
+  padding-bottom: 66px;
+  position: relative;
+}
+
+.s4_list::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid rgb(255, 255, 0);
+  height: 174px;
+  top: 52;
+  left: 28px;
+}
+
+/*Секция 5*/
+.s5 {
+  background-color: #303030;
+}
+
+.s5_list {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+  padding-top: 72px;
+}
+
+.s5_list li {
+  padding-left: 75px;
+  font-size: 14px;
+  font-family: "OpenSans";
+  color: #a4a4a4;
+  padding-bottom: 30px;
+  line-height: 24px;
+  position: relative;
+}
+
+.list-noTitle li::before,
+.list-special li::before,
+.list-outside li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(/img/s5_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -5px;
+  left: 30px;
+}
+
+.s5_list-title {
+  padding-left: 32px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "OpenSans Bold";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.s5_list-title:after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(255, 255, 0);
+  width: 40px;
+  top: 62px;
+  left: 32px;
+}
+
+.contacts li {
+  position: relative;
+}
+
+.contacts li:last-child::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url(/img/icon_viber.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 46px;
+}
+
+.contacts a:hover,
+.contacts a:focus {
+  color: rgb(255, 255, 0);
+  font-size: large;
+}
 
 /* правая стрелка слайдера */
 div.ant-carousel-arrow-right {
