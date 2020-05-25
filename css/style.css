@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
   src: url(/fonts/OpenSans-Bold.eot) format("embedded-opentype"),
     url(/fonts/OpenSans-Bold.ttf) format("truetype"),
     url(/fonts/OpenSans-Bold.woff) format("woff");
@@ -71,7 +71,8 @@ ul {
 
 .logo span {
   text-transform: uppercase;
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
+  font-weight: bold;
 }
 
 .logo::before {
@@ -79,7 +80,7 @@ ul {
   position: absolute;
   width: 46px;
   height: 46px;
-  background-image: url(/img/icon_sofa.png);
+  background-image: url(../img/icon_sofa.png);
   background-repeat: no-repeat;
   background-color: rgb(255, 255, 0);
   background-position: center;
@@ -106,7 +107,7 @@ ul {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(/img/icon_viber.png);
+  background-image: url(../img/icon_viber.png);
   background-repeat: no-repeat;
   background-position: center;
   top: 1px;
@@ -115,7 +116,7 @@ ul {
 
 .nav_list-item a {
   color: black;
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
   font-size: 16px;
 }
 
@@ -125,7 +126,7 @@ ul {
   flex-flow: column;
   align-items: center;
   color: white;
-  background: #535353 url(/img/s1_bg.png);
+  background: #535353 url(../img/s1_bg.png);
   background-blend-mode: overlay;
   background-position: center;
 
@@ -180,7 +181,7 @@ ul {
   position: absolute;
   width: 14px;
   height: 14px;
-  background-image: url(/img/icon_star.png);
+  background-image: url(../img/icon_star.png);
   background-repeat: no-repeat;
   background-position: center;
   top: 3px;
@@ -256,7 +257,7 @@ ul {
 .s2_list-item p {
   text-align: center;
   font-size: 16px;
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -267,7 +268,7 @@ ul {
   flex-flow: row;
   align-items: center;
   color: white;
-  background: #535353 url(/img/s3-bg.png);
+  background: #535353 url(../img/s3-bg.png);
   background-blend-mode: overlay;
   background-position: center;
   background-repeat: no-repeat;
@@ -352,7 +353,7 @@ div.ant-carousel-arrow-left {
   display: block;
   text-align: center;
   font-size: 18px;
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
   font-weight: bold;
   padding-top: 122px;
   position: relative;
@@ -422,7 +423,7 @@ div.ant-carousel-arrow-left {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-image: url(/img/s5_icon.png);
+  background-image: url(../img/s5_icon.png);
   background-repeat: no-repeat;
   background-position: center;
   top: -5px;
@@ -433,7 +434,7 @@ div.ant-carousel-arrow-left {
   padding-left: 32px;
   text-transform: uppercase;
   color: white;
-  font-family: "OpenSans Bold";
+  font-family: "OpenSans";
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
@@ -459,7 +460,7 @@ div.ant-carousel-arrow-left {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(/img/icon_viber.png);
+  background-image: url(../img/icon_viber.png);
   background-repeat: no-repeat;
   background-position: center;
   left: 46px;
