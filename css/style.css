@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "OpenSans";
-  src: url(/fonts/Coustard-Regular.ttf) format("truetype");
+  src: url(/fonts/GothamPro-Bold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -52,13 +52,24 @@ ul {
 }
 
 /*стили хедера*/
+.header_wrapper {
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  top: 15px;
+}
+
 .header_nav {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
+  margin: 10px 20px;
 }
 
 .logo {
+  display: flex;
   text-transform: capitalize;
   color: black;
   padding-top: 30px;
@@ -79,17 +90,13 @@ ul {
   position: absolute;
   width: 46px;
   height: 46px;
-  background-image: url(../img/icon_sofa.png);
+  background-image: url(../img/icons/logo.png);
   background-repeat: no-repeat;
-  background-color: rgb(255, 255, 0);
+  background-color: rgb(120, 161, 228);
   background-position: center;
   border-radius: 50%;
   top: 22px;
   left: -55px;
-}
-
-.nav_list {
-  padding-bottom: 28px;
 }
 
 .nav_list-item {
@@ -97,7 +104,7 @@ ul {
 }
 .nav_list-item a:hover,
 .nav_list-item a:focus {
-  color: rgb(255, 255, 0);
+  color: rgb(73, 123, 204);
   font-size: large;
 }
 
@@ -106,7 +113,7 @@ ul {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(../img/icon_viber.png);
+  background-image: url(../img/icons/inst.png);
   background-repeat: no-repeat;
   background-position: center;
   left: -24px;
@@ -117,6 +124,109 @@ ul {
   font-family: "OpenSans";
   font-size: 16px;
 }
+.header {
+  z-index: 3;
+}
+
+.header ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: inherit;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  padding: 2px 5px;
+  border: 1px solid #201f1f;
+  color: #535353;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "OpenSans";
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #8f5050;
+  font-weight: bold;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  display: flex;
+  border: 1px solid;
+  padding: 15px;
+  margin: 0 20px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.header .menu-icon .navicon {
+  display: block;
+  background: rgb(165, 30, 30);
+  width: 20px;
+  height: 2px;
+  position: relative;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.header .menu-icon .navicon::before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon::after {
+  top: -5px;
+}
+
+.header .menu-icon .navicon {
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  transition: all 0.2s ease-out;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 100%;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-39deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(35deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header .menu-btn {
+  display: none;
+}
 
 /*стили секции 1*/
 .s1 {
@@ -124,7 +234,7 @@ ul {
   flex-flow: column;
   align-items: flex-start;
   color: white;
-  background: #535353 url(../img/s1_bg.png);
+  background: #535353 url(../img/s1-bg.jpg);
   background-blend-mode: overlay;
   background-position: center;
 
@@ -167,7 +277,7 @@ ul {
   font-size: 32px;
   font-weight: bold;
 
-  color: rgb(255, 255, 0);
+  color: rgb(73, 123, 204);
 }
 
 .s1_bottom-element::before {
@@ -189,7 +299,7 @@ ul {
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url(../img/icon_star.png);
+  background-image: url(../img/icons/s1.png);
   background-repeat: no-repeat;
   background-position: center;
   top: 3px;
@@ -197,7 +307,7 @@ ul {
 }
 
 .s1_list-item span {
-  color: rgb(255, 255, 0);
+  color: rgb(214, 228, 251);
 }
 /*стили 2 секции*/
 .s2 {
@@ -225,7 +335,7 @@ ul {
 .s2_list-item {
   width: 170px;
   height: 170px;
-  border: 2px solid rgb(255, 255, 0);
+  border: 2px solid rgb(73, 123, 204);
   margin-bottom: 58px;
   padding: 50px;
   position: relative;
@@ -233,8 +343,8 @@ ul {
 }
 
 .s2_list-item:hover {
-  background-color: rgb(223, 255, 117);
-  border: 5px solid rgb(200, 200, 0);
+  background-color: rgb(146, 179, 231);
+  border: 5px solid rgb(73, 123, 204);
   transform: scale(1.1);
   transition: 0.5s;
 }
@@ -244,19 +354,19 @@ ul {
 }
 
 .s2_list-item:nth-child(1)::before {
-  background-image: url(../img/icon2.png);
+  background-image: url(../img/icons/s2-1.png);
 }
 
 .s2_list-item:nth-child(2)::before {
-  background-image: url(../img/icon4.png);
+  background-image: url(../img/icons/s2-2.png);
 }
 
 .s2_list-item:nth-child(3)::before {
-  background-image: url(../img/icon.png);
+  background-image: url(../img/icons/s2-3.png);
 }
 
 .s2_list-item:nth-child(4)::before {
-  background-image: url(../img/icon3.png);
+  background-image: url(../img/icons/s2-4.png);
 }
 
 .s2_list-item::before {
@@ -267,7 +377,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  background-color: rgb(255, 255, 0);
+  background-color: rgb(73, 123, 204);
   top: -41px;
   left: 38px;
 }
@@ -286,7 +396,7 @@ ul {
   flex-flow: row;
   align-items: center;
   color: white;
-  background: #535353 url(../img/s3-bg.png);
+  background: #535353 url(../img/s3-bg.jpg);
   background-blend-mode: overlay;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,7 +459,7 @@ ul {
   content: "";
   position: absolute;
   width: 38px;
-  border: 1px solid rgb(255, 255, 0);
+  border: 1px solid rgb(73, 123, 204);
   top: 10px;
   left: 0;
 }
@@ -412,7 +522,7 @@ div.ant-carousel-arrow-right {
   top: 48%;
   left: 38%;
   font-size: 118px;
-  color: rgb(255, 255, 0);
+  color: rgb(125, 165, 230);
   font-family: "Coustard Regular";
 }
 
@@ -434,7 +544,7 @@ div.ant-carousel-arrow-right {
   content: "";
   position: absolute;
   display: block;
-  border: 1px solid rgb(255, 255, 0);
+  border: 1px solid rgb(73, 123, 204);
   height: 150px;
   top: 50px;
   left: 28px;
@@ -449,7 +559,7 @@ div.ant-carousel-arrow-right {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: #303030;
+  background-color: rgb(8, 42, 97);
 
   /* background: url(../images/18.jpeg);
   background-position: center; */
@@ -479,7 +589,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url(../img/s5_icon.png);
+  background-image: url(../img/icons/s5.png);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -501,7 +611,7 @@ div.ant-carousel-arrow-right {
 .s5_list-title:after {
   content: "";
   position: absolute;
-  border: 1px solid rgb(255, 255, 0);
+  border: 1px solid rgb(73, 123, 204);
   width: 40px;
   top: 62px;
   left: 32px;
@@ -529,7 +639,7 @@ div.ant-carousel-arrow-right {
 }
 .contacts a:hover,
 .contacts a:focus {
-  color: rgb(255, 255, 0);
+  color: rgb(73, 123, 204);
   font-size: large;
 }
 
@@ -559,6 +669,7 @@ footer {
   .header_nav {
     flex-flow: row;
     justify-content: space-between;
+
     margin: 0 40px;
     padding: 34px 0;
   }

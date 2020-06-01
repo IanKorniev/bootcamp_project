@@ -3,28 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>IanKo</title>
   </head>
 
   <body>
-    <header class="container">
+    <div class="header_wrapper">
+      <header class="header container">
+        <nav class="header_nav">
+          <a class="logo" href="#">photo<span>art</span></a>
+
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+
+          <label class="menu-icon" for="menu-btn"
+            ><span class="navicon"></span
+          ></label>
+
+          <ul class="menu">
+            <li><a href="#info">info</a></li>
+            <li><a href="#gifts">gifts</a></li>
+            <li><a href="#about">line</a></li>
+            <li><a href="#careers">line</a></li>
+            <li><a href="#contact">line</a></li>
+            <li><a href="#contact">line</a></li>
+            <li class="nav_list-item"><a href="#">+38 050 071 53 30</a></li>
+            <li class="nav_list-item">
+              <a
+                href="https://www.facebook.com/aleksandra.hrevtsova.3?ref=bookmarks"
+                target="_blank"
+                >facebook</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- <header class="container">
       <nav class="header_nav">
-        <a class="logo" href="#">мебель<span>ремсервис</span></a>
+        <a class="logo" href="#">компухтер<span>топ</span></a>
         <ul class="nav_list">
-          <li class="nav_list-item"><a href="#">+38 068 604 46 26</a></li>
-          <li class="nav_list-item"><a href="#">+38 068 954 06 99</a></li>
+          <li class="nav_list-item"><a href="#">+38 xxx xxx xxxx</a></li>
+          <li class="nav_list-item">
+            <a href="#">@yan_kotoryi_s_dlinim_imenem</a>
+          </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <main class="container">
       <section class="s1">
-        <h2 class="s1_title">Ремонт мебели</h2>
+        <h2 class="s1_title">Сборка ПК</h2>
         <ul class="s1_list">
-          <li class="s1_list-item">Изготовление мебели под заказ</li>
-          <li class="s1_list-item">
-            <span>Гарантийный сервис</span> для организации
-          </li>
+          <li class="s1_list-item">Изготовление ПК под заказ</li>
+          <li class="s1_list-item">Замена<span> старых</span> комплектующих</li>
           <li class="s1_list-item">
             Использование <span>натуральных</span> материалов
           </li>
@@ -32,24 +62,24 @@
         <div class="s1_bottom-element"></div>
       </section>
       <section class="s2">
-        <h2 class="s2_title">Ремонт и реставрация мягкой мебели</h2>
+        <h2 class="s2_title">Сборка и ремонт вашего ПК</h2>
         <ul class="s2_list">
           <li class="s2_list-item">
-            <p>text</p>
-            <p>text</p>
-            <p>text</p>
+            <p>Огромный выбор видеокарт</p>
+            <p></p>
+            <p></p>
           </li>
           <li class="s2_list-item">
-            <p>text</p>
-            <p>text</p>
+            <p>Самые быстрые процессоры</p>
+            <p></p>
           </li>
           <li class="s2_list-item">
-            <p>text</p>
-            <p>text</p>
+            <p>Лучшая периферия со всего рынка</p>
+            <p></p>
           </li>
           <li class="s2_list-item">
-            <p>text</p>
-            <p>text</p>
+            <p>Самые низкие цены</p>
+            <p></p>
           </li>
         </ul>
       </section>
@@ -58,27 +88,27 @@
         <div class="ant-carousel-hider">
           <ul class="ant-carousel_list">
             <li class="ant-carousel-element">
-              <img src="./img/s3-1.png" alt="img-1" />
+              <img src="./img/s3-1.jpg" alt="img-1" />
               <p>Description</p>
             </li>
             <li class="ant-carousel-element">
-              <img src="./img/s3_2.png" alt="img-2" />
+              <img src="./img/s3-2.jpg" alt="img-2" />
               <p>Description</p>
             </li>
             <li class="ant-carousel-element">
-              <img src="./img/s3-1.png" alt="img-3" />
+              <img src="./img/s3-3.jpeg" alt="img-3" />
               <p>Description</p>
             </li>
             <li class="ant-carousel-element">
-              <img src="./img/s3_2.png" alt="img-4" />
+              <img src="./img/s3-1.jpg" alt="img-4" />
               <p>Description</p>
             </li>
             <li class="ant-carousel-element">
-              <img src="./img/s3-1.png" alt="img-5" />
+              <img src="./img/s3-2.jpg" alt="img-5" />
               <p>Description</p>
             </li>
             <li class="ant-carousel-element">
-              <img src="./img/s3_2.png" alt="img-6" />
+              <img src="./img/s3-3.jpeg" alt="img-6" />
               <p>Description</p>
             </li>
           </ul>
@@ -146,5 +176,7 @@
     <footer class="container">
       <p>&copy; 2020 | Копирование материалов запрещено</p>
     </footer>
+
+    <!-- <script src="index.js" type="module"></script> -->
   </body>
 </html>
