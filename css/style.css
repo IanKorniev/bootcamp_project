@@ -65,19 +65,18 @@ ul {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 20px;
+  margin: 0 20px;
+  padding: 20px 0;
 }
 
 .logo {
   display: flex;
   text-transform: capitalize;
   color: black;
-  padding-top: 30px;
-  padding-bottom: 24px;
+  padding-left: 50px;
   font-family: "OpenSans";
   font-size: 16px;
   position: relative;
-  padding-left: 51px;
 }
 
 .logo span {
@@ -96,8 +95,8 @@ ul {
   background-color: rgb(120, 161, 228);
   background-position: center;
   border-radius: 50%;
-  top: 19px;
-  left: -4px;
+  top: -13px;
+  left: -1px;
 }
 
 .nav_list-item {
@@ -107,6 +106,11 @@ ul {
 .nav_list-item a:focus {
   color: rgb(73, 123, 204);
   font-size: large;
+}
+
+.nav_list-item:last-child {
+  position: relative;
+  padding-right: 25px;
 }
 
 .nav_list-item:last-child::before {
@@ -122,8 +126,9 @@ ul {
 
 .nav_list-item a {
   color: black;
-  font-family: "OpenSans";
-  font-size: 16px;
+  font-family: "OpenSans Bold";
+  font-size: 14px;
+  line-height: 14px;
 }
 .header {
   z-index: 3;
@@ -238,7 +243,7 @@ ul {
   background: #535353 url(../img/s1-bg.jpg);
   background-blend-mode: overlay;
   background-position: center;
-
+  padding-top: 80px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -492,7 +497,25 @@ div.ant-carousel-arrow-right {
     no-repeat;
 }
 
-.div.ant-carousel-dots {
+div.ant-carousel-dots {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  z-index: 30;
+  text-align: center;
+}
+
+span.ant-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  padding: 0;
+  display: inline-block;
+  background-color: #bbb;
+  border-radius: 5px;
+  cursor: pointer;
 }
 /*.ant-carousel-arrow-left:hover,
 .ant-carousel-arrow-right:hover {
@@ -1095,7 +1118,7 @@ footer {
 
 /* анимация для секции 1 */
 
-.drop {
+/* .drop {
   background: rgb(238, 238, 134);
   border: 4px solid rgba(255, 245, 235, 1);
   border-radius: 100%;
@@ -1116,53 +1139,53 @@ footer {
 }
 
 /* Капля */
-
+/* 
 .drop:before {
   background: rgba(167, 217, 234, 1);
   border-radius: 100%;
 
   /* Начало капели */
-
+/* 
   box-shadow: 0 0 0 0.1em rgba(167, 217, 234, 0.8),
     0 0 0 0.15em rgba(167, 217, 234, 0.8), 0 0 0 0.2em rgba(167, 227, 234, 0.8),
     0 0 0 0.25em rgba(167, 227, 234, 0.8), 0 0 0 0.3em rgba(167, 227, 234, 0.8),
     0 0 0 0.35em rgba(167, 227, 234, 0.8), 0 0 0 0.4em rgba(167, 227, 234, 0.8),
     0 0 0 0.45em rgba(167, 227, 234, 0.8), 0 0 0 0.5em rgba(167, 227, 234, 0.8);
-  top: 0%;
-  left: 50%;
-
+  /* top: 0%;
+  left: 50%; */
+/* 
   /*Ширина "width" и высота "height" деления должны быть меньше общего размера "box-shadow". Так мы сможем контролировать различные типы размеров. */
 
-  width: 0.2em;
+/* width: 0.2em;
   height: 0.2em;
   animation: fall 3.5s cubic-bezier(0.5, 0, 1, 0.5) infinite;
-}
+} */
 
 /* Поверхность */
 
-.drop:after {
+/* .drop:after {
   background: rgb(52, 152, 219);
   background: linear-gradient(
     rgba(52, 255, 255, 1) 0%,
     rgba(52, 152, 219, 1) 10%,
-    rgba(152, 252, 219, 1) 100%
-  );
-  border-radius: 100% 0 50% 0;
+    rgba(152, 252, 219, 1) 100% */
+/* ); */
+/* border-radius: 100% 0 50% 0;
   left: 0;
   bottom: 0;
   width: inherit;
   height: 3em;
   opacity: 0.7;
   animation: surface 3s linear infinite;
-}
+} */
 
 /* Анимация капели */
-
+/* 
 @keyframes fall {
   /* Форма капли */
 
-  5%,
-  15% {
+/* 5%,
+   15% { 
     box-shadow: 0 -1.4em 0 0.1em rgba(167, 217, 234, 1),
       0 -0.8em 0 0.15em rgba(167, 217, 234, 1),
       0 -0.3em 0 0.2em rgba(167, 217, 234, 1),
@@ -1172,16 +1195,16 @@ footer {
       0 0.4em 0 0.4em rgba(167, 217, 234, 1),
       0 0.6em 0 0.45em rgba(167, 217, 234, 1),
       0 0.8em 0 0.5em rgba(167, 217, 234, 1);
-  }
+  } 
 
   /* Падение капли */
 
-  16% {
+/* 16% {
     top: 80%;
-  }
+  } */
 
-  /* Контакт с поверхностью */
-
+/* Контакт с поверхностью */
+/* 
   18% {
     top: 80%;
     box-shadow: 1em -8em 0 0.2em rgba(177, 227, 234, 1),
@@ -1193,9 +1216,9 @@ footer {
       -0.3em -3em 0 0.2em rgba(177, 227, 234, 1),
       0.5em -5em 0 0.35em rgba(177, 227, 234, 1),
       -3em -1em 0 0.3em rgba(177, 227, 234, 1);
-  }
+  } */
 
-  /* Брызги */
+/* Брызги
 
   30% {
     top: 90%;
@@ -1208,9 +1231,9 @@ footer {
       -0.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
       1em 0 0 0.3em rgba(252, 252, 255, 0.1),
       -4em 0 0 0.4em rgba(252, 252, 255, 0.1);
-  }
+  } */
 
-  /* Скрывание */
+/* Скрывание
 
   40%,
   100% {
@@ -1226,10 +1249,10 @@ footer {
       1.5em 0.5em 0 0.3em rgba(255, 255, 255, 0),
       -4.5em 0.5em 0 0.2em rgba(255, 255, 255, 0);
   }
-}
+} */
 
 /* Анимация водной поверхности */
-
+/* 
 @keyframes surface {
   50% {
     border-radius: 0 75% 0 75%;
@@ -1238,16 +1261,16 @@ footer {
   }
 }
 
-/* анимация для секции 2 */
-.loading {
+анимация для секции 2 */
+/* .loading {
   background: rgba(0, 50, 250, 0);
   position: relative;
   margin: 5em auto 0 auto;
   width: 3em;
   height: 3em;
   animation-name: rotate;
-}
-
+} */
+/* 
 .loading,
 .loading:before,
 .loading:after {
@@ -1265,8 +1288,8 @@ footer {
   left: 0;
   width: inherit;
   height: inherit;
-}
-
+} */
+/* 
 .loading:before {
   background: rgba(200, 250, 100, 0);
   animation-name: ring;
@@ -1288,16 +1311,16 @@ footer {
 
   /* Скрыто */
 
-  85%,
+/* 85%,
   100% {
     /* 360 градусов х 10 */
 
-    transform: rotateZ(3600deg) scaleX(2.01) scaleY(2) translateZ(0);
+/* transform: rotateZ(3600deg) scaleX(2.01) scaleY(2) translateZ(0);
     box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0),
       inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0);
   }
-}
-
+}  * */
+/* 
 @keyframes ring {
   0% {
     transform: scaleX(0.1) scaleY(0.5);
@@ -1309,13 +1332,13 @@ footer {
 
   /* Скрыто */
 
-  75%,
+/* 75%,
   100% {
     transform: scaleX(2) scaleY(2.1);
     box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0),
       inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0);
-  }
-}
+  } */
+/* }
 
 @keyframes ring2 {
   0% {
@@ -1324,14 +1347,14 @@ footer {
       inset 0 0.8em 0 rgba(252, 150, 0, 0.5),
       inset -0.8em 0 0 rgba(0, 255, 0, 0.5),
       inset 0 -0.8em 0 rgba(0, 150, 255, 0.5);
-  }
+  } */
 
-  /* Скрыто */
+/* Скрыто */
 
-  65%,
+/* 65%,
   100% {
     transform: scaleX(2) scaleY(2.1);
     box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0),
       inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0);
   }
-}
+} */
